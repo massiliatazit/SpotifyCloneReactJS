@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 
 class ArtistCard extends React.Component {
   state = {
-    genre: "pop",
+    genre: "jazz",
     artists: [],
     loading: true,
   };
@@ -15,7 +15,6 @@ class ArtistCard extends React.Component {
   };
   componentDidUpdate = (prevProps, prevState) => {
     if (prevProps.genre !== this.props.genre) {
-      console.log("differnet genre");
       this.setState({ genre: this.props.genre });
       this.setState({ loading: true });
       this.fetchArtists();

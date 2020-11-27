@@ -29,15 +29,16 @@ class ArtistPage extends React.Component {
       );
       let parsedResponse = await response.json();
       this.setState({ artist: parsedResponse });
-      console.log(this.state.artist);
+      console.log("here", this.state.artist);
     } catch (error) {
       console.log(error);
     }
   };
   fetchTracklist = async () => {
+    await console.log(this.props.match.params.id);
     try {
       let response2 = await fetch(
-        `https://deezerdevs-deezer.p.rapidapi.com/artist/${this.props.match.params.id}/top?limit=50`,
+        `https://deezerdevs-deezer.p.rapidapi.com/artist/${this.props.match.params.id}/top?limit=80`,
         {
           method: "GET",
           headers: {
@@ -49,7 +50,7 @@ class ArtistPage extends React.Component {
       );
       let parsedResponse2 = await response2.json();
       this.setState({ tracklist: parsedResponse2.data });
-      console.log(this.state.tracklist);
+      console.log("here too", this.state.tracklist);
     } catch (error) {
       console.log(error);
     }

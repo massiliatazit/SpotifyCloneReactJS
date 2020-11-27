@@ -7,16 +7,16 @@ class HomeNav extends React.Component {
       <Container fluid>
         <Row className="mt-4 align-items-center justify-content-center mb-5">
           <ListGroup horizontal>
-            <ListGroup.Item onClick={() => this.props.getGenre("Rock")}>
+            <ListGroup.Item onClick={() => this.props.getGenre("Blues")}>
               Rock
             </ListGroup.Item>
-            <ListGroup.Item onClick={() => this.props.getGenre("Pop")}>
+            <ListGroup.Item onClick={() => this.props.getGenre("Disco")}>
               Pop
             </ListGroup.Item>
             <ListGroup.Item onClick={() => this.props.getGenre("Rap")}>
               Rap
             </ListGroup.Item>
-            <ListGroup.Item onClick={() => this.props.getGenre("Weeb")}>
+            <ListGroup.Item onClick={() => this.props.getGenre("Punk Rock")}>
               Weeb
             </ListGroup.Item>
             <ListGroup.Item onClick={() => this.props.getGenre("Jazz")}>

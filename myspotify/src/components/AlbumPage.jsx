@@ -10,7 +10,6 @@ class AlbumPage extends React.Component {
 
   componentDidMount = () => {
     this.fetchTracklist();
-    console.log("hi");
   };
 
   fetchTracklist = async () => {

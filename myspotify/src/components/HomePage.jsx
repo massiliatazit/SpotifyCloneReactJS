@@ -1,11 +1,11 @@
 import React from "react";
-import HomeNav from "./HomeNav";
+
 import HomeBody from "./HomeBody";
 import { Container } from "react-bootstrap";
 
 class HomePage extends React.Component {
   state = {
-    genre: "rock",
+    genre: "jazz",
   };
   fetchGenre = (selectedGenre) => {
     this.setState({ genre: selectedGenre });
@@ -13,7 +13,6 @@ class HomePage extends React.Component {
   render() {
     return (
       <Container fluid id="mainBody">
-        <HomeNav getGenre={this.fetchGenre} />
         <HomeBody genre={this.state.genre} />
       </Container>
     );
